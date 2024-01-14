@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(30, 38%, 92%);
+    }
+
+    .sub-container {
+      height: 26rem;
+      width: 34rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 10px;
+    }
+
+    .perfume-img {
+      height: 26rem;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .perfume-img2{
+      display: none;
+    }
+
+    .prd-dtl {
+      padding: 25px 30px 20px 25px;
+      display: flex;
+      /* align-items: center; */
+      /* justify-content: center; */
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    p {
+      color: hsl(228, 12%, 48%);
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.4rem;
+    }
+
+    .perfume {
+      letter-spacing: 5px;
+      font-weight: 500;
+    }
+
+    h1 {
+      /* font-family: 'Fraunces', sans-serif; */
+      font-size: 2.3rem;
+      line-height: 2.1rem;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .newprice {
+      color: hsl(158, 36%, 37%);
+      font-family: 'Fraunces', sans-serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+    }
+
+    .cart-btn {
+      background-color: hsl(158, 36%, 37%);
+      color: white;
+      border: none;
+      padding: 10px;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+    }
+
+    .cart-btn:hover {
+      cursor: pointer;
+      background-color: hsl(158, 44%, 18%);
+    }
+
+    @media screen and (max-width: 756px){ 
+      .sub-container{
+        margin: 20px;
+        width: 21rem;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .perfume-img{
+        display: none;
+      }
+      .perfume-img2{
+        border-radius: 10px 10px 0 0;
+        display: block;
+        width: 21rem;
+      }
+      p{
+        font-size: 16px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <div class="sub-container">
+
+      <img class="perfume-img" src="./images/image-product-desktop.jpg" alt="">
+      <img class="perfume-img2" src="./images/image-product-mobile.jpg" alt="">
+
+      <div class="prd-dtl">
+
+        <p class="perfume">PERFUME</p>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+
+        <div class="price">
+          <span class="newprice">$149.99</span>
+          <p><s class="price">$169.99</s></p>
+        </div>
+
+        <button class="cart-btn">
+          <img class="cart-img" src="./images/icon-cart.svg" alt="">
+          <span>Add to Cart</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- Perfume
+
+  Gabrielle Essence Eau De Parfum
+
+  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.
+
+  $149.99
+  $169.99
+
+  Add to Cart -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">it's UK</a>.
+  </div> -->
+</body>
+
+</html>
